@@ -59,7 +59,6 @@ const IntegerInput = ({value, onChange, min, max}) => {
 		<input
 			value={displayValue}
 			onChange={onChangeCallback}
-			maxLength={2}
 			className={`rdtInput ${invalid && 'invalid'}`}
 		/>
 	);
