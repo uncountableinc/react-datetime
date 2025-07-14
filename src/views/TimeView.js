@@ -53,9 +53,11 @@ export const IntegerInput = ({value, onChange, min, max}) => {
 		}
 	}, [onChange, max, min, setStateValue]);
 
+	const displayValue = String(stateValue).padStart(2, '0');
+
 	return (
 		<input
-			value={stateValue}
+			value={displayValue}
 			onChange={onChangeCallback}
 			className={`rdtInput ${invalid && 'invalid'}`}
 		/>
