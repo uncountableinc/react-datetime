@@ -34,7 +34,7 @@ function createConstraints( overrideTimeConstraints ) {
 	return constraints;
 }
 
-export const IntegerInput = ({value, onChange, min, max}) => {
+const IntegerInput = ({value, onChange, min, max}) => {
 	const [stateValue, setStateValue] = useState(value);
 	const invalid = parseInt(stateValue, 10) !== parseInt(value, 10);
 
@@ -59,6 +59,7 @@ export const IntegerInput = ({value, onChange, min, max}) => {
 		<input
 			value={displayValue}
 			onChange={onChangeCallback}
+			maxLength={2}
 			className={`rdtInput ${invalid && 'invalid'}`}
 		/>
 	);
